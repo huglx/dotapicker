@@ -1,9 +1,8 @@
 package com.hugl.peekme.domain
 
+import com.squareup.moshi.Json
+
 class Models {
-    data class Hero(val name: String,
-                     val id: Int,
-                     val url: String,
-                     val displayName: String) {
-    }
+    data class Hero(@Json(name = "localized_name")
+                    val name: String)
 }

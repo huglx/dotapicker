@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs"
-apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 30
@@ -69,6 +68,8 @@ dependencies {
     // Retrofit for networking
     implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
     implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
+    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
     implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_retrofit_coroutines_adapter"
 
     // Moshi for parsing the JSON format
